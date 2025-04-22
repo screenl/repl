@@ -43,7 +43,7 @@ class Interaction:
             })
             try:
                 self.process_response()
-                break
+                return
             except lean.LeanError as e:
                 err_info = e.args[0]
                 print(f"error : {err_info}, retrying...")
