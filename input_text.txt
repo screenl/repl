@@ -4,8 +4,10 @@ import Mathlib.Data.Real.Irrational
 open NNReal
 open Classical
 
-题目：example (p q : Nat) (h : q ≠ 0) : ¬ ((sqrt 2 + sqrt 3 : Real) = Rat.normalize (p) (q) (h)) := by
+题目：example : Irrational (sqrt 2 + sqrt 3) := by
+unfold Irrational; intro hcontras;
+sorry
 
-上下文：∀ (p q : ℕ) (h : q ≠ 0), ¬↑(sqrt 2) + ↑(sqrt 3) = ↑(Rat.normalize (↑p) q h)
+上下文：hcontras : ↑(sqrt 2) + ↑(sqrt 3) ∈ Set.range Rat.cast ⊢ False
 
 接下来是你的任务：

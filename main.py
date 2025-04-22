@@ -34,6 +34,8 @@ class Interaction:
         #pipeline the generated code into repl
         self.code, self.ctx = lean.fill_and_run(self.code, -1, code)
 
+    def finish(self) -> None:
+        self.code, self.ctx = lean.fill_and_run(self.code, -1, 'aesop')
 
     def retry(self, err_info) -> None:
         for _ in range(MAX_RETRY_COUNT):
@@ -68,8 +70,11 @@ import Mathlib.Data.Real.Sqrt
 import Mathlib.Data.Real.Irrational
 open NNReal
 open Classical
-example (p q : Nat) (h : q ≠ 0) : ¬ ((sqrt 2 + sqrt 3 : Real) = Rat.normalize (p) (q) (h)) := by
+
+example : Irrational (sqrt 2 + sqrt 3) := by
+unfold Irrational; intro hcontras;
 sorry
+
 """
 
 
@@ -82,9 +87,12 @@ if __name__ == "__main__":
     inter = Interaction(code,prompt)
     try:
         for _ in range(MAX_ROUNDS):
-            s = input("enter instruction ('exit' to stop): \n")
+            s = input("enter instruction ('exit' to stop, 'done' to close): \n")
             if s.lower()=="exit":
                 break
+            if s.lower()=="done":
+                try: inter.finish(); break
+                except: print("cannot finish yet"); continue
             if not s:
                 print("empty instruction")
                 continue

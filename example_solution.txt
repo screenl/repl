@@ -1,0 +1,13 @@
+Assume √2 + √3 is rational. Then there exists a rational number q such that: √2 + √3 = q
+
+Thus √3 = q−√2
+
+Squaring both sides: 3 = (q−√2)^2
+
+Expanding the right side: 3 = q^2 −2q √2 + 2
+
+Equating the two sides: 3 = q^2 + 2−2q√2
+
+This simplifies to: 2q√2 = q^2−1
+
+The left side is irrational and the right side is also rational because q is rational, resulting in a contradiction. Therefore, our assumption is false, and √2 + √3 must be irrational.
