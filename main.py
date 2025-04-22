@@ -26,6 +26,7 @@ class Interaction:
     def process_response(self) -> None:
         #send message to gpt
         response = gpt.gpt(self.conversation, gpt.LeanOutput)
+        self.conversation.append({"role": "assistant", "content": str(response)})
         code = response['lean'] + '\nsorry'
         print('-----------------------')
         print(code)
