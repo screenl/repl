@@ -3,7 +3,7 @@ from datetime import datetime
 import gpt
 import json
 
-MAX_RETRY_COUNT = 10
+MAX_RETRY_COUNT = 5
 MAX_ROUNDS = 100
 
 class Interaction:
@@ -43,6 +43,7 @@ class Interaction:
             })
             try:
                 self.process_response()
+                break
             except lean.LeanError as e:
                 err_info = e.args[0]
                 print(f"error : {err_info}, retrying...")
