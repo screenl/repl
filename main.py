@@ -1,83 +1,92 @@
-import os
+import lean
+from datetime import datetime
+import gpt
 import json
 
-IN_BUFF = 'temp.lean'
-OUT_BUFF = 'temp.json'
+MAX_RETRY_COUNT = 10
+MAX_ROUNDS = 100
 
-def split_by_pos(text: str, pos1: tuple, pos2: tuple) -> tuple:
+class Interaction:
+    ctx : str #current proof context in lean
+    code : str #current lean code
+    logfile : str #name of the log file
+    conversation : list[dict[str,str]]
 
-    def pos_to_index(text, pos):
-        line, col = pos
-        lines = text.splitlines(keepends=True)
-        if line < 1 or line > len(lines):
-            raise ValueError(f"Line number {line} out of range (1-{len(lines)}).")
-        index = sum(len(l) for l in lines[:line-1]) + (col)
-        if index < 0 or index > len(text):
-            raise ValueError(f"Column number {col} out of range in line {line}.")
-        return index
+    def __init__(self, code, prompt) -> None:
+        self.code = code
+        self.ctx = lean.fill_and_run(code, -1, 'sorry')
+        self.logfile = f"logs/conversation_{datetime.now():%Y%m%d_%H%M%S}.json"
+        self.conversation = [{"role": "system", "content": prompt}]
+        self.error_counter = 0
 
-    idx1 = pos_to_index(text, pos1)
-    idx2 = pos_to_index(text, pos2)
+    def save_log(self) -> None:
+        print(f"saving log to {self.logfile}")
+        with open(self.logfile, "a", encoding='utf-8') as f:
+            json.dump(self.conversation, f, ensure_ascii=False, indent=4)
 
-    if idx1 > idx2:
-        idx1, idx2 = idx2, idx1
+    def process_response(self) -> None:
+        #send message to gpt
+        response = gpt.gpt(self.conversation, gpt.LeanOutput)
+        code = response['lean'] + '\nsorry'
+        print('-----------------------')
+        print(code)
+        print('-----------------------')
+        #pipeline the generated code into repl
+        self.code, self.ctx = lean.fill_and_run(self.code, -1, code)
 
-    return text[:idx1], text[idx1:idx2], text[idx2:]
 
-class LeanError(Exception):
-    def __init__(self, *args):
-        super().__init__(*args)
+    def retry(self, err_info) -> None:
+        for _ in range(MAX_RETRY_COUNT):
+            self.conversation.append({
+                "role" : "user",
+                "content" : f'''error: {err_info}'''
+            })
+            try:
+                self.process_response()
+            except lean.LeanError as e:
+                err_info = e.args[0]
+                print(f"error : {err_info}, retrying...")
 
-def check_resp(resp : dict) -> None:
-    for m in resp["messages"]:
-        if m["severity"] == "error":
-            raise LeanError(m["data"])
+        raise Exception("failed after too many retries")
 
-def run_code(code: str) -> dict:
-    with open(IN_BUFF, 'w') as f:
-        f.write(code)
 
-    query1 = json.dumps({"path": IN_BUFF, "allTactics": True})
-    os.system(f"""echo '{query1}' | lake env .lake/build/bin/repl > {OUT_BUFF}""")
-    # os.system(f"""echo '{query1}' | lake exe repl > {OUT_BUFF}""")
-    resp = {}
+    def comm(self, uinput) -> None:
+        self.conversation.append({
+            "role" : "user",
+            "content" : f'''proof context: {self.ctx}\n user_input: {uinput}'''
+        })
+        try:
+            self.process_response()
+        except lean.LeanError as e:
+            err_info = e.args[0]
+            print(f"error : {err_info}, retrying...")
+            self.retry(err_info)
 
-    with open(OUT_BUFF,'r') as f:
-        resp = json.loads(f.read())
+code = """
+import Mathlib.Data.Real.Sqrt
+import Mathlib.Data.Real.Irrational
+open NNReal
+open Classical
+example (p q : Nat) (h : q ≠ 0) : ¬ ((sqrt 2 + sqrt 3 : Real) = Rat.normalize (p) (q) (h)) := by
+sorry
+"""
 
-    check_resp(resp)
-    return resp
 
-def fill_and_run(code : str, pos : int, subst : str) -> str:
-    resp = run_code(code)
+if __name__ == "__main__":
+    with open("prompt.txt", "r") as f:
+        prompt = f.read()
+    with open("input_text.txt", "r") as f:
+        prompt += f.read()
 
-    if "sorries" not in resp or len(resp["sorries"]) == 0:
-      return code
-
-    pos1 = (resp["sorries"][pos]["pos"]["line"], resp["sorries"][pos]["pos"]["column"])
-    pos2 = (resp["sorries"][pos]["endPos"]["line"], resp["sorries"][pos]["endPos"]["column"])
-    c1, _, c2 = split_by_pos(code, pos1, pos2)
-    newcode = c1 + subst + c2
-    # print(newcode)
-    newresp = run_code(newcode)
-    return newcode
-
-s = '''import Mathlib.Algebra.BigOperators.Group.Finset.Defs
-
-def F (n: Nat) :=
-  match n with
-  | 0 => 1
-  | 1 => 1
-  | Nat.succ (Nat.succ m) => (F m) + (F (Nat.succ m))
-
-def prob3' (n : ℕ) : ∑ (x ∈ (Finset.range (n+1))), (F x) * (F x)= (F n) * (F (n + 1)) := by
-  induction n with
-  | zero => sorry
-  | succ n ih =>
-    have h1: ∑ (x ∈ (Finset.range (n+1+1))), (F x) * (F x) = (F n) * (F (n+1)) + (F (n+1)) * (F (n+1)) := by sorry
-    have h2: (F n) * (F (n+1)) + (F (n+1)) * (F (n+1)) = (F (n + 1)) * (F (n) + F (n+1)) := by sorry
-    have h3: (F (n + 1)) * (F (n) + F (n+1)) = (F (n + 1)) * (F (n+2)) := by sorry
-    sorry
-'''
-
-print(fill_and_run(s, 0, 'rfl'))
+    inter = Interaction(code,prompt)
+    try:
+        for _ in range(MAX_ROUNDS):
+            s = input("enter instruction ('exit' to stop): \n")
+            if s.lower()=="exit":
+                break
+            if not s:
+                print("empty instruction")
+                continue
+            inter.comm(s)
+    finally:
+        inter.save_log()

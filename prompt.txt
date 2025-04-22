@@ -1,0 +1,45 @@
+你现在正在lean4中证明一个命题， 你现在有一些上下文，你的任务是把一句英语的证明转化为lean的代码， 使用have… := by sorry; 的形式，不需要给出具体的证明，注意你不可以思考如何完整证明这个命题，你需要做的只有思考如何将我给你的自然语言翻译成lean4中的语言。以下是一个例子：
+上下文：
+p : ℕ+
+ih : ∀ m < p,
+  ∀ (q : ℕ),
+    ↑↑m / ↑q < 1 →
+      0 < ↑↑m / ↑q →
+        ∃ l,
+          l.Nodup ∧
+            ↑↑m / ↑q =
+              (List.map (fun a ↦ 1 / a) do
+                  let a ← l
+                  pure ↑↑a).sum
+q : ℕ
+hx1 : ↑↑p / ↑q < 1
+hx2 : 0 < ↑↑p / ↑q
+hqg0 : 0 < q
+hqn0 : ↑q ≠ 0
+hq0' : 0 < ↑q
+c : ℕ+
+h1 : ↑↑c * (↑↑p / ↑q) < 1
+h2 : 1 ≤ (↑↑c + 1) * (↑↑p / ↑q)
+⊢ ∃ l,
+  l.Nodup ∧
+    ↑↑p / ↑q =
+      (List.map (fun a ↦ 1 / a) do
+          let a ← l
+          pure ↑↑a).sum
+
+英语证明：
+by the archimedean property, there is an integer such that
+  c * p < q and (c + 1) * p > q
+
+你需要的输出：
+have ⟨c, ⟨h1, h2⟩⟩ := exists_zsmul_near_of_pos'' hx2 hx1 := by
+  have hcx : q ≤ ↑p * (1 + ↑c) := by sorry;
+  have hqpc : ↑p * ↑c < q:= by sorry;
+  sorry
+
+请注意，上文我给出的例子与你接下来就要遇到的的任务在内容上无关，只是让你了解你的工作环境。
+
+语法提示：
+- 当涉及到lean中的数学表达式type转换时, 应当使用类似于如下的语法: (a + b : Real) 显明地表达转换到的类型是什么,
+- 请留意输出代码的类型问题, 并根据具体情况做相应的修改
+- 记住在sorry后面加分号

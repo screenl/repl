@@ -7,3 +7,5 @@
 /test/*.olean.tmp
 /test/*.produced.out
 temp.*
+/logs
+/.vscode

@@ -1,0 +1,11 @@
+这里是引用的一些库：
+import Mathlib.Data.Real.Sqrt
+import Mathlib.Data.Real.Irrational
+open NNReal
+open Classical
+
+题目：example (p q : Nat) (h : q ≠ 0) : ¬ ((sqrt 2 + sqrt 3 : Real) = Rat.normalize (p) (q) (h)) := by
+
+上下文：∀ (p q : ℕ) (h : q ≠ 0), ¬↑(sqrt 2) + ↑(sqrt 3) = ↑(Rat.normalize (↑p) q h)
+
+接下来是你的任务：
