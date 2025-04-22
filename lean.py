@@ -61,7 +61,7 @@ def fill_and_run(code : str, pos : int, subst : str) -> str:
     newcode = c1 + subst + c2
     # print(newcode)
     newresp = run_code(newcode)
-    return newcode
+    return newcode, resp['sorries'][-1]['goal']
 
 s = '''import Mathlib.Algebra.BigOperators.Group.Finset.Defs
 

@@ -11,7 +11,7 @@ import lean
 def gpt(message, form):
     client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
     completion = client.beta.chat.completions.parse(
-        model="gpt-4o-mini-2024-07-18",
+        model="gpt-4.1-2025-04-14",
         messages= message,
         response_format = form,
         max_tokens= 1024,

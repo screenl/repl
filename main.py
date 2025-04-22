@@ -17,7 +17,6 @@ class Interaction:
         self.ctx = lean.fill_and_run(code, -1, 'sorry')
         self.logfile = f"logs/conversation_{datetime.now():%Y%m%d_%H%M%S}.json"
         self.conversation = [{"role": "system", "content": prompt}]
-        self.error_counter = 0
 
     def save_log(self) -> None:
         print(f"saving log to {self.logfile}")
