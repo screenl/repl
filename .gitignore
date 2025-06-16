@@ -10,3 +10,5 @@ temp.*
 /logs
 /.vscode
 /__pycache__
+
+.venv

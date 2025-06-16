@@ -6,10 +6,13 @@ from openai import OpenAI
 from pydantic import BaseModel, Field
 from datetime import datetime
 import lean
+from httpx import Client
 
 # -*- coding: utf-8 -*-
 def gpt(message, form):
-    client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+    client = OpenAI(api_key=os.environ["OPENAI_API_KEY"],
+                    http_client=Client(trust_env=False)
+                    )
     completion = client.beta.chat.completions.parse(
         model="gpt-4.1-2025-04-14",
         messages= message,
