@@ -1,0 +1,1 @@
+example {α : Type} [Group α] (x y z : α) (h₁ : x * y * z = 1) : y * z * x = 1 := by

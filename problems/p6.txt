@@ -1,0 +1,1 @@
+example {α : Type} [Monoid α] : Group αˣ := by

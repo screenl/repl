@@ -1,0 +1,1 @@
+example {α : Type} [Monoid α] (a b c d : α) (h₁ : a * c = 1) (h₂ : c * a = 1) (h₃ : b * d = 1) (h₄ : d * b =1) : ∃ (f : α), (f * (a * b) = 1) ∧ ((a * b) * f = 1) := by

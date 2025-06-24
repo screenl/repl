@@ -1,6 +1,4 @@
 import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Group.Units.Defs
-import Mathlib.Algebra.Group.MinimalAxioms
 
-example {S : Type} (a l r e : S) (op : S → S → S) (h : Std.Associative op) (he : Std.Identity op e) (h₁ : op l a = e) (h₂ : op a r = e) : (l = r) := by
+example {α : Type} [Monoid α] (a l r: α) (h₁ : l * a = 1) (h₂ : a * r = 1) : (l = r) := by
   sorry

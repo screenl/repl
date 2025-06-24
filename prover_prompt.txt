@@ -1,0 +1,8 @@
+Respond ONLY with only Lean4 code in the following format:
+
+```lean4
+
+```
+
+Only include the Final Lean4 Code. Do NOT include any assistant or user role tags, do NOT echo the prompt.
+Never include anything not allowed by LEAN4 syntax, like proof context.

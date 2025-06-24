@@ -18,7 +18,9 @@ def load_problem(path: str) -> str:
         with open(p, "r", encoding='utf-8') as f:
             # Read the file content
 
-            return f.read()
+            code = f.read()
+            # Optional cleaning
+            return code
 
 
     elif p.is_dir():
@@ -37,8 +39,7 @@ class Interaction:
 
     def __init__(self, code, prompt) -> None:
         self.code = code
-        self.ctx = lean.fill_and_run(cod
-                                     e, -1, 'sorry')
+        self.ctx = lean.fill_and_run(code, -1, 'sorry')
         self.logfile = f"logs/conversation_{datetime.now():%Y%m%d_%H%M%S}.json"
         self.conversation = [{"role": "system", "content": prompt}]
 
@@ -50,10 +51,11 @@ class Interaction:
     def process_response(self) -> None:
         #send message to gpt
         
-        repsonse = prover.prove(self.conversation)
+        response = prover.prove(self.conversation)
         # response = gpt.gpt(self.conversation, gpt.LeanOutput)
         self.conversation.append({"role": "assistant", "content": str(response)})
-        code = response['lean'] + '\nsorry'
+        # code = response['lean'] + '\nsorry'
+        code = response
         print('-----------------------')
         print(code)
         print('-----------------------')
@@ -98,22 +100,20 @@ if __name__ == "__main__":
     MAX_RETRY_COUNT = 5
     MAX_ROUNDS = 100
 
-    with open("prompt.txt", "r") as f:
+    with open("prover_prompt.txt", "r") as f:
         prompt = f.read()
-    with open("input_text.txt", "r") as f:
-        prompt += f.read()
+    # with open("input_text.txt", "r") as f:
+    #     prompt += f.read()
 
-    code = """import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Group.Units.Defs
-import Mathlib.Algebra.Group.MinimalAxioms
+    code = """def op {S : Type} (a : S) (b : S) : S := a
 
-def op {S : Type} (a : S) (b : S) : S := a
-
-example {S : Type} (a l r e : S) (op : S → S → S) (h : Std.Associative op) (he : Std.Identity op e) (h₁ : op l a = e) (h₂ : op a r = e) : (l = r) := by
-    sorry
+example {S : Type} (a b c : S) : op a (op b c) = op (op a b) c := by
+  sorry
+  
+  
 """
     
-    # load_problem("problems/p1.txt")
+    # code = load_problem("problems/p7.txt")
 
     inter = Interaction(code, prompt)
     try:

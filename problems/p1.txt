@@ -1,8 +1,3 @@
-import Mathlib.Algebra.Group.Defs
-import Mathlib.Algebra.Group.Units.Defs
-import Mathlib.Algebra.Group.MinimalAxioms
-
-
 def op {S : Type} (a : S) (b : S) : S := a
 
 example {S : Type} (a b c : S) : op a (op b c) = op (op a b) c := by

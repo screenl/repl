@@ -1,0 +1,19 @@
+structure Opposite (G : Type*) where
+  val : G
+
+namespace Opposite
+
+variable {G : Type*} [Group G]
+
+instance : Group (Opposite G) where
+  mul a b := ⟨b.val * a.val⟩
+  one := ⟨1⟩
+  inv a := ⟨a.val⁻¹⟩
+  mul_assoc a b c := by
+    sorry
+  one_mul a := by
+    sorry
+  mul_one a := by
+    sorry
+  inv_mul_cancel a := by
+    sorry
