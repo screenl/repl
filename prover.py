@@ -40,5 +40,10 @@ def prove(conversation,max_new_tokens=512):
         )
 
     proof = tokenizer.batch_decode(outputs)
+    
+    # print("---------")
+    # print("Complete Proof generated:\n", proof[0])
+    # print("---------")
+
     return extract_last_lean4_block(proof[0])
 

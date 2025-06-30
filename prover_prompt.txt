@@ -4,5 +4,11 @@ Respond ONLY with only Lean4 code in the following format:
 
 ```
 
+
 Only include the Final Lean4 Code. Do NOT include any assistant or user role tags, do NOT echo the prompt.
+Include some prefix that is also used, make sure your output itself can run without error
+
+Don't use:
+    use c
+    cases '
 Never include anything not allowed by LEAN4 syntax, like proof context.

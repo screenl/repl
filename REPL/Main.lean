@@ -11,7 +11,9 @@ import REPL.Lean.Environment
 import REPL.Lean.InfoTree
 import REPL.Lean.InfoTree.ToJson
 import REPL.Snapshots
-
+import Mathlib.Algebra.Group.Defs
+import Mathlib.Algebra.Group.Units.Defs
+import Aesop
 /-!
 # A REPL for Lean.
 

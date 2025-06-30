@@ -33,6 +33,16 @@ def check_resp(resp : dict) -> None:
         if m["severity"] == "error":
             raise LeanError(m["data"])
 
+def check_resp1(resp):
+    if not isinstance(resp, dict):
+        raise LeanError("Invalid response format (not a dict)")
+
+    messages = resp.get("messages", [])
+    for m in messages:
+        if m.get("severity") == "error":
+            raise LeanError(m.get("data", "Unknown error"))
+
+
 def run_code(code: str) -> dict:
     with open(IN_BUFF, 'w') as f:
         f.write(code)
@@ -45,7 +55,7 @@ def run_code(code: str) -> dict:
     with open(OUT_BUFF,'r') as f:
         resp = json.loads(f.read())
 
-    check_resp(resp)
+    check_resp1(resp)
     return resp
 
 def fill_and_run(code : str, pos : int, subst : str) -> str:

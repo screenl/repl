@@ -37,11 +37,15 @@ class Interaction:
     logfile : str #name of the log file
     conversation : List[Dict[str,str]]
 
-    def __init__(self, code, prompt) -> None:
+    def __init__(self,prefix, code, prompt) -> None:
+        self.prefix = prefix
         self.code = code
-        self.ctx = lean.fill_and_run(code, -1, 'sorry')
+        self.ctx = lean.run_code(self.prefix+ self.code)
+        print(self.ctx)
         self.logfile = f"logs/conversation_{datetime.now():%Y%m%d_%H%M%S}.json"
         self.conversation = [{"role": "system", "content": prompt}]
+        self.error = ""
+        
 
     def save_log(self) -> None:
         print(f"saving log to {self.logfile}")
@@ -51,7 +55,15 @@ class Interaction:
     def process_response(self) -> None:
         #send message to gpt
         
-        response = prover.prove(self.conversation)
+        ## using only current ones
+        response = prover.prove(
+            [
+                {"role": "system", "content": prompt},
+                {"role": "user", "content": self.code},
+                {"role": "user", "content": f'''proof states: {self.ctx}'''},
+                {"role": "user", "content": self.error}
+            ]
+        )
         # response = gpt.gpt(self.conversation, gpt.LeanOutput)
         self.conversation.append({"role": "assistant", "content": str(response)})
         # code = response['lean'] + '\nsorry'
@@ -61,9 +73,14 @@ class Interaction:
         print('-----------------------')
         #pipeline the generated code into repl
         # self.code, self.ctx = lean.fill_and_run(self.code, -1, code)
+        self.code = code
+        self.ctx = lean.run_code(self.prefix +self.code)
+        print(self.ctx)
 
     def finish(self) -> None:
-        self.code, self.ctx = lean.fill_and_run(self.code, -1, 'aesop')
+
+        self.ctx = lean.run_code(self.prefix + self.code)
+        print(self.ctx)
 
     def retry(self, err_info) -> None:
         for _ in range(MAX_RETRY_COUNT):
@@ -76,15 +93,18 @@ class Interaction:
                 return
             except lean.LeanError as e:
                 err_info = e.args[0]
+                ## add e here
+                self.error = str(e)
+
                 print(f"error : {err_info}, retrying...")
 
         raise Exception("failed after too many retries")
 
 
-    def comm(self, uinput) -> None:
+    def comm(self) -> None:
         self.conversation.append({
             "role" : "user",
-            "content" : f'''proof context: {self.ctx}\n user_input: {uinput}'''
+            "content" : f'''proof states: {self.ctx}'''
         })
         try:
             self.process_response()
@@ -98,33 +118,40 @@ class Interaction:
 
 if __name__ == "__main__":
     MAX_RETRY_COUNT = 5
-    MAX_ROUNDS = 100
+    MAX_ROUNDS = 1
 
     with open("prover_prompt.txt", "r") as f:
         prompt = f.read()
     # with open("input_text.txt", "r") as f:
     #     prompt += f.read()
 
-    code = """import Mathlib.Algebra.Group.Defs
+#     code = """
+#     def op {S : Type} (a : S) (b : S) : S := a
 
-example {α : Type} [Monoid α] (a l r: α) (h₁ : l * a = 1) (h₂ : a * r = 1) : (l = r) := by
-  sorry
-"""
+#     example {S : Type} (a b c : S) : op a (op b c) = op (op a b) c := by
+#       rfl
+# """
     
-    # code = load_problem("problems/p1.txt")
+    code = load_problem("problems/p8.txt")
+    prefix = """
+    import Mathlib.Algebra.Group.Defs
+    import Mathlib.Algebra.Group.Units.Defs
+    
+    import Aesop
+    
+    structure Opposite (G : Type*) where
+      val : G
 
-    inter = Interaction(code, prompt)
+    namespace Opposite
+
+    variable {G : Type*} [Group G]
+
+    """
+
+    inter = Interaction(prefix, code, prompt)
     try:
         for _ in range(MAX_ROUNDS):
-            s = input("enter instruction ('exit' to stop, 'done' to close): \n")
-            if s.lower()=="exit":
-                break
-            if s.lower()=="done":
-                try: inter.finish(); break
-                except: print("cannot finish yet"); continue
-            if not s:
-                print("empty instruction")
-                continue
-            inter.comm(s)
+            ## in this logic, then @k, k = MAX_ROUNDS * MAX_RETRY_COUNT
+            inter.comm()
     finally:
         inter.save_log()

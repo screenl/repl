@@ -1,4 +1,5 @@
 import Mathlib.Algebra.BigOperators.Group.Finset.Defs
+import Mathlib.Algebra.Group.Defs
 
 def F (n: Nat) :=
   match n with
@@ -14,3 +15,8 @@ def prob3' (n : ℕ) : ∑ (x ∈ (Finset.range (n+1))), (F x) * (F x)= (F n) * 
     have h2: (F n) * (F (n+1)) + (F (n+1)) * (F (n+1)) = (F (n + 1)) * (F (n) + F (n+1)) := by sorry
     have h3: (F (n + 1)) * (F (n) + F (n+1)) = (F (n + 1)) * (F (n+2)) := by sorry
     sorry
+
+
+
+example {α : Type} [Monoid α] (a b c : α) (h₁ : a * c = 1) (h₂ : c * a = 1) (h₃ : a * b = 1) (h₄ : b * a = 1) : b = c := by
+  sorry

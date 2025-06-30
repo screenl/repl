@@ -1,3 +1,5 @@
-def s (n : Nat) : Nat := n + 1
+-- add this as prefix
+-- def s (n : Nat) : Nat := n + 1
 
 example : ¬ ∃ (s₁ : Nat → Nat), ∀ (n : Nat), s (s₁ n) = n := by
+  sorry

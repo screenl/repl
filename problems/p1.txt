@@ -1,4 +1,5 @@
-def op {S : Type} (a : S) (b : S) : S := a
+-- add this as prefix
+-- def op {S : Type} (a : S) (b : S) : S := a
 
 example {S : Type} (a b c : S) : op a (op b c) = op (op a b) c := by
   sorry

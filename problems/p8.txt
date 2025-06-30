@@ -1,9 +1,9 @@
-structure Opposite (G : Type*) where
-  val : G
+-- structure Opposite (G : Type*) where
+--  val : G
 
-namespace Opposite
+-- namespace Opposite
 
-variable {G : Type*} [Group G]
+-- variable {G : Type*} [Group G]
 
 instance : Group (Opposite G) where
   mul a b := ⟨b.val * a.val⟩

@@ -1,4 +1,4 @@
-import Mathlib.Algebra.Group.Defs
+
 
 example {α : Type} [Monoid α] (a l r: α) (h₁ : l * a = 1) (h₂ : a * r = 1) : (l = r) := by
   sorry
