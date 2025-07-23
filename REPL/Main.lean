@@ -12,6 +12,101 @@ import REPL.Lean.InfoTree
 import REPL.Lean.InfoTree.ToJson
 import REPL.Snapshots
 
+import Mathlib.Algebra.Algebra.Basic
+import Mathlib.Algebra.Order.Floor
+import Mathlib.Algebra.BigOperators.Associated
+import Mathlib.Algebra.BigOperators.Fin
+
+import Mathlib.Algebra.BigOperators.Pi
+import Mathlib.Algebra.GeomSum
+import Mathlib.Algebra.Group.Pi.Basic
+import Mathlib.Algebra.Group.Pi.Lemmas
+import Mathlib.Algebra.Group.Commute.Basic
+import Mathlib.Algebra.Group.Commute.Defs
+import Mathlib.Algebra.Group.Commute.Hom
+import Mathlib.Algebra.Group.Commute.Units
+import Mathlib.Algebra.Group.Submonoid.Membership
+import Mathlib.Algebra.Order.Floor
+import Mathlib.Algebra.QuadraticDiscriminant
+import Mathlib.Algebra.Ring.Basic
+import Mathlib.Analysis.MeanInequalitiesPow
+import Mathlib.Analysis.Asymptotics.AsymptoticEquivalent
+import Mathlib.Analysis.Normed.Module.Basic
+import Mathlib.Analysis.SpecialFunctions.Log.Basic
+import Mathlib.Analysis.SpecialFunctions.Log.Base
+import Mathlib.Combinatorics.SimpleGraph.Basic
+import Mathlib.Data.Complex.Basic
+import Mathlib.Data.Complex.Exponential
+import Mathlib.Data.Finset.Basic
+import Mathlib.Data.Fintype.Card
+
+import Mathlib.Data.Int.GCD
+import Mathlib.Data.Int.ModEq
+import Mathlib.Algebra.Group.Int.Even
+import Mathlib.Data.List.Intervals
+import Mathlib.Data.List.Palindrome
+import Mathlib.Data.Multiset.Basic
+
+import Mathlib.Data.Nat.Choose.Basic
+import Mathlib.Data.Nat.Factorial.Basic
+import Mathlib.Data.Nat.Fib.Basic
+import Mathlib.Data.Nat.Fib.Zeckendorf
+import Mathlib.Data.Nat.ModEq
+import Mathlib.Data.Nat.Multiplicity
+import Mathlib.Algebra.Group.Nat.Even
+import Mathlib.Data.Nat.Prime.Basic
+import Mathlib.Data.PNat.Basic
+import Mathlib.Data.PNat.Prime
+
+import Mathlib.Data.Rat.BigOperators
+import Mathlib.Data.Rat.Cast.CharZero
+import Mathlib.Data.Rat.Cast.Defs
+import Mathlib.Data.Rat.Cast.Lemmas
+import Mathlib.Data.Rat.Cast.Order
+import Mathlib.Data.Rat.Defs
+import Mathlib.Data.Rat.Denumerable
+import Mathlib.Data.Rat.Encodable
+import Mathlib.Algebra.Field.Rat
+import Mathlib.Data.Rat.Floor
+import Mathlib.Data.Rat.Init
+import Mathlib.Data.Rat.Lemmas
+import Mathlib.Algebra.Order.Ring.Rat
+import Mathlib.Data.Rat.Sqrt
+
+import Mathlib.Data.Rat.Star
+import Mathlib.Data.Real.Basic
+import Mathlib.Data.ENNReal.Basic
+import Mathlib.Data.ENNReal.Inv
+import Mathlib.Data.ENNReal.Operations
+import Mathlib.Data.ENNReal.Real
+import Mathlib.Data.Real.ENatENNReal
+import Mathlib.Data.Real.Irrational
+import Mathlib.Data.NNReal.Defs
+import Mathlib.Data.Real.Sqrt
+
+import Mathlib.Data.Finite.Defs
+import Mathlib.Data.Sym.Sym2
+import Mathlib.Data.ZMod.Basic
+import Mathlib.Dynamics.FixedPoints.Basic
+
+import Mathlib.LinearAlgebra.AffineSpace.AffineMap
+import Mathlib.LinearAlgebra.AffineSpace.Independent
+import Mathlib.LinearAlgebra.AffineSpace.Ordered
+import Mathlib.Logic.Equiv.Basic
+
+import Mathlib.Order.Filter.Basic
+
+import Mathlib.Order.WellFounded
+import Mathlib.Topology.Basic
+import Mathlib.Topology.Instances.NNReal.Lemmas
+
+import Mathlib.Data.ZMod.Basic
+import Mathlib.RingTheory.Int.Basic
+
+
+import Aesop
+
+
 /-!
 # A REPL for Lean.
 
