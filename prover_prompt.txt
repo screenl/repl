@@ -11,4 +11,5 @@ Include some prefix that is also used, make sure your output itself can run with
 Don't use:
     use c
     cases '
+    <;> simp_all
 Never include anything not allowed by LEAN4 syntax, like proof context.

@@ -1,10 +1,12 @@
-import lean
+import lean_buff2 as lean
 from datetime import datetime
 import gpt
 import json
 from typing import List, Dict
 import prover
 from pathlib import Path
+import re
+from tqdm import tqdm
 
 def load_problem(path: str) -> str:
     """
@@ -114,36 +116,62 @@ class Interaction:
             self.retry(err_info)
 
 
+def remove_unused_head(content):
+    remove_headers = [
+        r"import Mathlib\.Algebra\.BigOperators\.Basic",
+        r"import Mathlib\.Data\.Nat\.Digits",
+        r"open BigOperators"
+    ]
 
+    pattern = re.compile("|".join(remove_headers))
+
+    
+    filtered_lines = []
+    for line in content.splitlines():
+        if not pattern.match(line.strip()):
+            filtered_lines.append(line)
+    filtered_content = "\n".join(filtered_lines)
+    return filtered_content
 
 if __name__ == "__main__":
     MAX_RETRY_COUNT = 5
     MAX_ROUNDS = 1
 
+    log_file = "result@5.jsonl"
     with open("prover_prompt.txt", "r") as f:
         prompt = f.read()
-    
-    code = load_problem("problems/p3.txt")
-    prefix = """
-    import Mathlib.Algebra.Group.Defs
-    import Mathlib.Algebra.Group.Units.Defs
-    """
-    """
-    import Aesop
-    
-    structure Opposite (G : Type*) where
-      val : G
 
-    namespace Opposite
 
-    variable {G : Type*} [Group G]
+            
+    with open ("minif2f_lean4.json", "r") as f:
+        problems = json.load(f)
 
-    """
 
-    inter = Interaction(prefix, code, prompt)
-    try:
-        for _ in range(MAX_ROUNDS):
-            ## in this logic, then @k, k = MAX_ROUNDS * MAX_RETRY_COUNT
-            inter.comm()
-    finally:
-        inter.save_log()
+
+
+    for i in  tqdm(range(len(problems))):
+        code = problems[i].get("formal_statement", "")
+        prefix = problems[i].get("header", "") 
+        prefix = remove_unused_head(prefix) + "\n"
+
+        
+        print("---")
+        print(prefix + "\n" + code)
+        print("---")
+        try:
+            inter = Interaction(prefix, code, prompt)
+            for _ in range(MAX_ROUNDS):
+                ## in this logic, then @k, k = MAX_ROUNDS * MAX_RETRY_COUNT
+                inter.comm()
+            
+            with open(log_file, "a", encoding='utf-8') as f:
+                f.write(str({"problem_index": i, "code": inter.code,"result": inter.ctx}) + "\n")
+
+        except Exception as e:
+            print(f"Error initializing interaction: {e}")
+            with open(log_file, "a", encoding='utf-8') as f:
+                f.write(str({"problem_index": i,inter.code, "error": str(e)}) + "\n")
+            
+        finally:
+            inter.save_log()
+            
