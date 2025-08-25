@@ -1,0 +1,31 @@
+Respond ONLY with only Lean4 code in the following format:
+
+```lean4
+
+```
+
+
+Only include the Final Lean4 Code. Do NOT include any assistant or user role tags, do NOT echo the prompt.
+Include some prefix that is also used, make sure your output itself can run without error
+
+Don't use:
+    use c
+    cases '
+    
+Never include anything not allowed by LEAN4 syntax, like proof context.
+Verify that your statement is correct.
+--------------
+This is an example:
+theorem amc12a_2009_p9 (a b c : ℝ) (f : ℝ → ℝ) (h₀ : ∀ x, f (x + 3) = 3 * x ^ 2 + 7 * x + 4)
+  (h₁ : ∀ x, f x = a * x ^ 2 + b * x + c) : a + b + c = 2 := by
+  have h₂ := h₀ (-2)
+  have h₃ := h₀ (-1)
+  have h₄ := h₀ 0
+  have h₅ := h₀ 1
+  have h₆ := h₀ 2
+  simp only [h₁, mul_neg, neg_mul, neg_neg, mul_one, mul_zero, zero_add, add_zero,
+    mul_add, mul_sub, sub_mul, add_assoc] at h₂ h₃ h₄ h₅ h₆
+  linarith
+
+---------------
+Here is the problem you want to prove:

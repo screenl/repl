@@ -1,0 +1,379 @@
+---
+import Mathlib.Data.Real.Basic
+import Mathlib.Data.Complex.Basic
+import Mathlib.Data.Nat.Log
+import Mathlib.Data.Complex.Exponential
+import Mathlib.NumberTheory.Divisors
+import Mathlib.Data.ZMod.Defs
+import Mathlib.Data.ZMod.Basic
+import Mathlib.Topology.Basic
+
+open Real
+open Nat
+open Topology
+
+theorem amc12a_2020_p21 (S : Finset ℕ)
+  (h₀ : ∀ n : ℕ, n ∈ S ↔ 5 ∣ n ∧ Nat.lcm 5! n = 5 * Nat.gcd 10! n) : S.card = 48 := sorry
+---
+{'sorries': [{'proofState': 0, 'pos': {'line': 14, 'column': 84}, 'goal': 'S : Finset ℕ\nh₀ : ∀ (n : ℕ), n ∈ S ↔ 5 ∣ n ∧ 5!.lcm n = 5 * 10!.gcd n\n⊢ S.card = 48', 'endPos': {'line': 14, 'column': 89}}], 'messages': [{'severity': 'warning', 'pos': {'line': 13, 'column': 8}, 'endPos': {'line': 13, 'column': 23}, 'data': "declaration uses 'sorry'"}], 'env': 0}
+---------
+Complete Proof generated:
+ <｜begin▁of▁sentence｜>Respond ONLY with only Lean4 code in the following format:
+
+```lean4
+
+```
+
+
+Only include the Final Lean4 Code. Do NOT include any assistant or user role tags, do NOT echo the prompt.
+Include some prefix that is also used, make sure your output itself can run without error
+
+Don't use:
+    use c
+    cases '
+    
+Never include anything not allowed by LEAN4 syntax, like proof context.
+Verify that your statement is correct.<｜User｜>theorem amc12a_2020_p21 (S : Finset ℕ)
+  (h₀ : ∀ n : ℕ, n ∈ S ↔ 5 ∣ n ∧ Nat.lcm 5! n = 5 * Nat.gcd 10! n) : S.card = 48 := sorry<｜Assistant｜><｜User｜>proof states: {'sorries': [{'proofState': 0, 'pos': {'line': 14, 'column': 84}, 'goal': 'S : Finset ℕ\nh₀ : ∀ (n : ℕ), n ∈ S ↔ 5 ∣ n ∧ 5!.lcm n = 5 * 10!.gcd n\n⊢ S.card = 48', 'endPos': {'line': 14, 'column': 89}}], 'messages': [{'severity': 'warning', 'pos': {'line': 13, 'column': 8}, 'endPos': {'line': 13, 'column': 23}, 'data': "declaration uses 'sorry'"}], 'env': 0}<｜Assistant｜><｜User｜><｜Assistant｜>theorem amc12a_2020_p21 (S : Finset ℕ)
+  (h₀ : ∀ n : ℕ, n ∈ S ↔ 5 ∣ n ∧ Nat.lcm 5! n = 5 * Nat.gcd 10! n) : S.card = 48 := by
+  have h₁ : S = Finset.filter (fun n => 5 ∣ n) (Finset.filter (fun n => Nat.lcm 5! n = 5 * Nat.gcd 10! n) (Finset.range (10! + 1))) := by
+    ext n
+    simp [h₀, Nat.factorial]
+    <;> omega
+  rw [h₁]
+  rfl
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+
+---------
+-----------------------
+theorem amc12a_2020_p21 (S : Finset ℕ)
+  (h₀ : ∀ n : ℕ, n ∈ S ↔ 5 ∣ n ∧ Nat.lcm 5! n = 5 * Nat.gcd 10! n) : S.card = 48 := by
+  have h₁ : S = Finset.filter (fun n => 5 ∣ n) (Finset.filter (fun n => Nat.lcm 5! n = 5 * Nat.gcd 10! n) (Finset.range (10! + 1))) := by
+    ext n
+    simp [h₀, Nat.factorial]
+    <;> omega
+  rw [h₁]
+  rfl
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+-----------------------
+error : omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 0
+  a ≥ 725761
+where
+ a := ↑n / 5
+ b := ↑(gcd 3628800 n), retrying...
+---------
+Complete Proof generated:
+ <｜begin▁of▁sentence｜>Respond ONLY with only Lean4 code in the following format:
+
+```lean4
+
+```
+
+
+Only include the Final Lean4 Code. Do NOT include any assistant or user role tags, do NOT echo the prompt.
+Include some prefix that is also used, make sure your output itself can run without error
+
+Don't use:
+    use c
+    cases '
+    
+Never include anything not allowed by LEAN4 syntax, like proof context.
+Verify that your statement is correct.<｜User｜>theorem amc12a_2020_p21 (S : Finset ℕ)
+  (h₀ : ∀ n : ℕ, n ∈ S ↔ 5 ∣ n ∧ Nat.lcm 5! n = 5 * Nat.gcd 10! n) : S.card = 48 := by
+  have h₁ : S = Finset.filter (fun n => 5 ∣ n) (Finset.filter (fun n => Nat.lcm 5! n = 5 * Nat.gcd 10! n) (Finset.range (10! + 1))) := by
+    ext n
+    simp [h₀, Nat.factorial]
+    <;> omega
+  rw [h₁]
+  rfl
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide<｜Assistant｜><｜User｜>proof states: {'sorries': [{'proofState': 0, 'pos': {'line': 14, 'column': 84}, 'goal': 'S : Finset ℕ\nh₀ : ∀ (n : ℕ), n ∈ S ↔ 5 ∣ n ∧ 5!.lcm n = 5 * 10!.gcd n\n⊢ S.card = 48', 'endPos': {'line': 14, 'column': 89}}], 'messages': [{'severity': 'warning', 'pos': {'line': 13, 'column': 8}, 'endPos': {'line': 13, 'column': 23}, 'data': "declaration uses 'sorry'"}], 'env': 0}<｜Assistant｜><｜User｜><｜Assistant｜>theorem amc12a_2020_p21 (S : Finset ℕ)
+  (h₀ : ∀ n : ℕ, n ∈ S ↔ 5 ∣ n ∧ Nat.lcm 5! n = 5 * Nat.gcd 10! n) : S.card = 48 := by
+  have h₁ : S = Finset.filter (fun n => 5 ∣ n) (Finset.filter (fun n => Nat.lcm 5! n = 5 * Nat.gcd 10! n) (Finset.range (10! + 1))) := by
+    ext n
+    simp [h₀, Nat.factorial]
+    <;> omega
+  rw [h₁]
+  rfl
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+
+---------
+-----------------------
+theorem amc12a_2020_p21 (S : Finset ℕ)
+  (h₀ : ∀ n : ℕ, n ∈ S ↔ 5 ∣ n ∧ Nat.lcm 5! n = 5 * Nat.gcd 10! n) : S.card = 48 := by
+  have h₁ : S = Finset.filter (fun n => 5 ∣ n) (Finset.filter (fun n => Nat.lcm 5! n = 5 * Nat.gcd 10! n) (Finset.range (10! + 1))) := by
+    ext n
+    simp [h₀, Nat.factorial]
+    <;> omega
+  rw [h₁]
+  rfl
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+  <;> decide
+-----------------------
+error : omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 0
+  a ≥ 725761
+where
+ a := ↑n / 5
+ b := ↑(gcd 3628800 n), retrying...

@@ -15,11 +15,23 @@ def extract_last_lean4_block(text: str) -> str:
     return matches[-1].strip() if matches else ""
 
 
+
+# def extract_assistant_response(text: str) -> str:
+#     segments = re.findall(r"<\|Assistant\|>(.*?)(?=<\|User\||<\|System\||$)", text, re.DOTALL)
+#     if not segments:
+#         return text.strip()
+#     return segments[-1].strip()  
 def extract_assistant_response(text: str) -> str:
-    segments = re.findall(r"<\|Assistant\|>(.*?)(?=<\|User\||<\|System\||$)", text, re.DOTALL)
+    # 抓取最后一个 <｜Assistant｜> 后的内容
+    segments = re.findall(r"<\｜Assistant\｜>(.*?)(?=<\｜User\｜|<\｜System\｜|$)", text, re.DOTALL)
     if not segments:
         return text.strip()
-    return segments[-1].strip()  
+    result = segments[-1]
+
+    # 去掉所有类似 <｜...｜> 的标签
+    result = re.sub(r"<\｜.*?\｜>", "", result)
+
+    return result.strip()
 
 
 def prove(conversation,max_new_tokens=512):
@@ -41,9 +53,12 @@ def prove(conversation,max_new_tokens=512):
 
     proof = tokenizer.batch_decode(outputs)
     
-    # print("---------")
-    # print("Complete Proof generated:\n", proof[0])
-    # print("---------")
+    print("---------")
+    print("Complete Proof generated:\n", proof[0])
+    # print(extract_assistant_response(proof[0]))
+    print("---------")
 
-    return extract_last_lean4_block(proof[0])
+    lean_extract = extract_last_lean4_block(proof[0])
+    assistant_extract = extract_assistant_response(proof[0])
+    return assistant_extract if lean_extract == "" else lean_extract
 

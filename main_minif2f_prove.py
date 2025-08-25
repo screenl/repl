@@ -1,6 +1,6 @@
 import lean_buff2 as lean
 from datetime import datetime
-import gpt
+# import gpt
 import json
 from typing import List, Dict
 import prover
@@ -134,10 +134,10 @@ def remove_unused_head(content):
     return filtered_content
 
 if __name__ == "__main__":
-    MAX_RETRY_COUNT = 5
+    MAX_RETRY_COUNT = 2
     MAX_ROUNDS = 1
 
-    log_file = "result@5.jsonl"
+    log_file = "prove_result_438_.jsonl"
     with open("prover_prompt.txt", "r") as f:
         prompt = f.read()
 
@@ -149,7 +149,7 @@ if __name__ == "__main__":
 
 
 
-    for i in  tqdm(range(len(problems))):
+    for i in  tqdm(range(438, len(problems))):
         code = problems[i].get("formal_statement", "")
         prefix = problems[i].get("header", "") 
         prefix = remove_unused_head(prefix) + "\n"
@@ -165,13 +165,13 @@ if __name__ == "__main__":
                 ## in this logic, then @k, k = MAX_ROUNDS * MAX_RETRY_COUNT
                 inter.comm()
             
-            with open(log_file, "a", encoding='utf-8') as f:
-                f.write(str({"problem_index": i, "result": inter.ctx}) + "\n")
+                with open(log_file, "a", encoding='utf-8') as f:
+                    f.write(str({"problem_index": i,"code": inter.code, "result": "no bug, can double check"}) + "\n")
 
         except Exception as e:
             print(f"Error initializing interaction: {e}")
             with open(log_file, "a", encoding='utf-8') as f:
-                f.write(str({"problem_index": i, "error": str(e)}) + "\n")
+                f.write(str({"problem_index": i,"code": inter.code, "error": str(e)}) + "\n")
             
         finally:
             inter.save_log()

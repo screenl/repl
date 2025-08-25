@@ -1,0 +1,1188 @@
+/scratch/yj2638/repl/.venv/lib/python3.8/site-packages/transformers/utils/hub.py:128: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+  0%|          | 0/440 [00:00<?, ?it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.96s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.06s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.20s/it]
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.67it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.90it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.61it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  0%|          | 1/440 [04:38<34:00:51, 278.93s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.06it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.30it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.06it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  0%|          | 2/440 [05:24<17:15:33, 141.86s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+  1%|          | 3/440 [05:27<9:29:23, 78.18s/it]  warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.07it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.52it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.23it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  1%|          | 4/440 [06:13<7:56:43, 65.60s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.85it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.05it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.82it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  1%|          | 5/440 [06:49<6:38:00, 54.90s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.10it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.29it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.06it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  1%|▏         | 6/440 [07:36<6:17:28, 52.19s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.92it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.17it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.93it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  2%|▏         | 7/440 [08:13<5:41:33, 47.33s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.97it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.26it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.01it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.99it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.18it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.95it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  2%|▏         | 8/440 [09:41<7:12:27, 60.06s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+  2%|▏         | 9/440 [09:43<5:02:01, 42.05s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.93it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.12it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.90it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.76it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.25it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.95it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.33it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.86it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.56it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  2%|▏         | 10/440 [11:21<7:04:58, 59.30s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.86it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.20it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.94it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.27it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.41it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.20it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  2%|▎         | 11/440 [12:52<8:12:49, 68.93s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.95it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.21it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.96it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  3%|▎         | 12/440 [13:32<7:09:41, 60.24s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.17it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.62it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.34it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  3%|▎         | 13/440 [14:09<6:19:06, 53.27s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.85it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.28it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.00it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.87it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.18it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.93it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.80it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.09it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.84it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  3%|▎         | 14/440 [16:20<9:04:09, 76.64s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.78it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.05it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.80it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.93it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.51it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.19it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.94it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.49it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.18it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  3%|▎         | 15/440 [18:11<10:15:49, 86.94s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.86it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.23it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.08it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.79it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.15it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.89it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.88it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.51it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.18it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  4%|▎         | 16/440 [20:23<11:49:48, 100.44s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.98it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.39it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.11it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.87it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.43it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.48it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.12it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.55it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.27it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  4%|▍         | 17/440 [22:10<12:03:01, 102.56s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.84it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.21it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.94it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  4%|▍         | 18/440 [22:46<9:40:22, 82.52s/it]  warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.87it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.26it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.99it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.94it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.32it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.05it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.86it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.36it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.06it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  4%|▍         | 19/440 [25:07<11:43:04, 100.20s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.89it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.15it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.91it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.12s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.56s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.79s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  5%|▍         | 20/440 [29:56<18:18:11, 156.88s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.08s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.19s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.47s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:05<00:05,  5.23s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.45s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:07<00:00,  3.71s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  5%|▍         | 21/440 [35:29<24:25:02, 209.79s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.83s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.05s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.32s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.12s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.65s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.87s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.63s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.28s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.49s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  5%|▌         | 22/440 [43:36<34:01:04, 292.98s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.33s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  2.83s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.06s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.09s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.04s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.20s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.13s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.59s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.82s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  5%|▌         | 23/440 [50:40<38:29:10, 332.26s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.53s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  2.85s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.10s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.47s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.53s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.67s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:04<00:04,  4.35s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  2.81s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:06<00:00,  3.04s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  5%|▌         | 24/440 [58:08<42:24:08, 366.94s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.62s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.50s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:05<00:00,  2.67s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  6%|▌         | 25/440 [1:00:17<34:03:28, 295.44s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:03<00:03,  3.13s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.25s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:04<00:00,  2.38s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  6%|▌         | 26/440 [1:01:34<26:27:04, 230.01s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.43it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.43it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.23it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.81it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.05it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.81it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.84it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.12it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.87it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  6%|▌         | 27/440 [1:04:00<23:29:26, 204.76s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.95it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.50it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.19it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  6%|▋         | 28/440 [1:04:42<17:51:23, 156.03s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.91it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.59it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.25it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.94it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.38it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.10it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.83it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.46it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.13it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  7%|▋         | 29/440 [1:07:02<17:15:26, 151.16s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.74it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.95it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.72it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.73it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.13it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.85it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.21it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.58it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.31it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  7%|▋         | 30/440 [1:09:18<16:40:51, 146.47s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.06it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.67it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.35it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.93it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.43it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.13it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.86it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.09it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.86it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  7%|▋         | 31/440 [1:11:35<16:20:22, 143.82s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.84it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.13it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.88it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.82it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.57it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.21it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  7%|▋         | 32/440 [1:12:42<13:41:32, 120.82s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.87it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.45it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.13it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.93it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.61it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.27it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.85it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.31it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.02it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  8%|▊         | 33/440 [1:15:07<14:28:11, 127.99s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.78it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.14it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.87it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.14it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.44it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.19it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  8%|▊         | 34/440 [1:16:11<12:16:52, 108.90s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.92it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.38it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.09it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  8%|▊         | 35/440 [1:16:58<10:08:58, 90.22s/it] warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.84it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.35it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.05it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.79it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.98it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.75it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.96it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.50it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.19it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  8%|▊         | 36/440 [1:19:23<11:57:39, 106.58s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.89it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.17it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.93it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.86it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.34it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.05it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.99it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.49it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.19it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  8%|▊         | 37/440 [1:21:32<12:41:01, 113.30s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.90it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.39it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.09it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  9%|▊         | 38/440 [1:22:18<10:25:06, 93.30s/it] warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.84it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.29it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.00it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.75it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.15it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.88it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.07it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.38it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.13it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  9%|▉         | 39/440 [1:24:03<10:46:45, 96.77s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+  9%|▉         | 40/440 [1:24:06<7:36:20, 68.45s/it] warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.82it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.22it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.94it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+  9%|▉         | 41/440 [1:24:49<6:45:14, 60.94s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.88it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.12it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.88it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.88it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.22it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.96it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.89it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.22it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.96it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+ 10%|▉         | 42/440 [1:26:54<8:50:51, 80.03s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.91it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.49it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.17it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.65it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.63it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.45it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.15it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.31it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.53it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+ 10%|▉         | 43/440 [1:29:14<10:49:18, 98.13s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.43it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.80it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.50it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.93it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.60it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.48it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.11it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.67it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.34it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+ 10%|█         | 44/440 [1:31:25<11:53:36, 108.12s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.02it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.01it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.01it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.92it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.20it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.15it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.11it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.61it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.31it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+ 10%|█         | 45/440 [1:33:51<13:05:49, 119.37s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.85it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.24it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.97it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.72it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.96it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.72it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.11it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.48it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.21it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+ 10%|█         | 46/440 [1:36:18<13:58:29, 127.69s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.81it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.27it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.98it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+ 11%|█         | 47/440 [1:37:07<11:21:35, 104.06s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.79it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.37it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.05it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+ 11%|█         | 48/440 [1:37:55<9:29:48, 87.22s/it]  warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.77it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.13it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.86it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.00it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.49it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.20it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.88it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.29it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.01it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+ 11%|█         | 49/440 [1:39:39<10:01:31, 92.31s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.86it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.14it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.89it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+ 11%|█▏        | 50/440 [1:40:26<8:31:47, 78.74s/it] warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.65it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.24it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.91it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+ 12%|█▏        | 51/440 [1:41:14<7:29:30, 69.33s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.17it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.47it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.21it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.67it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.01it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.73it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.44it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.90it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.58it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+ 12%|█▏        | 52/440 [1:43:44<10:05:10, 93.58s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.93it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.55it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.44it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.31it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.83it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.48it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  4.02it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.63it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.52it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+ 12%|█▏        | 53/440 [1:45:58<11:22:49, 105.86s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  1.44it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.64it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  2.34it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.62it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.52it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.35it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+ 12%|█▏        | 54/440 [1:47:32<10:56:59, 102.12s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.79it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.96it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.72it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.11it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.30it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.06it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.99it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.51it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.21it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+ 12%|█▎        | 55/440 [1:49:39<11:43:45, 109.68s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.98it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.42it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.14it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.90it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.30it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.03it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.97it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.50it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.20it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+ 13%|█▎        | 56/440 [1:52:09<12:58:56, 121.71s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.86it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.23it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.96it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.70it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.01it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.76it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.88it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.36it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.07it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+ 13%|█▎        | 57/440 [1:54:33<13:40:37, 128.56s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.94it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.24it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.99it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+ 13%|█▎        | 58/440 [1:55:24<11:09:47, 105.20s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.91it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.22it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.97it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.86it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.99it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.78it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.92it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.31it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.02it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+ 13%|█▎        | 59/440 [1:57:44<12:14:22, 115.65s/it]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.23it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.79it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.42it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.73it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  5.06it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.80it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  3.48it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.90it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  4.61it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+slurmstepd: error: *** JOB 65365492 ON gv012 CANCELLED AT 2025-08-23T11:59:29 DUE TO TIME LIMIT ***

@@ -1,0 +1,12 @@
+{"messages":
+ [{"severity": "error",
+   "pos": {"line": 23, "column": 2},
+   "endPos": {"line": 23, "column": 69},
+   "data":
+   "linarith failed to find a contradiction\ncase h1.h\na b c : ℝ\nh₀ : 3 * a + b + c = -3\nh₁ : a + 3 * b + c = 9\nh₂ : a + b + 3 * c = 19\nh₃ : -1 + a * 3 + b + c = -4\nh₄ : -1 + a + b * 3 + c = 8\nh₅ : -1 + a + b + c * 3 = 18\na✝ : a * b * c < -56\n⊢ False failed"},
+  {"severity": "error",
+   "pos": {"line": 61, "column": 14},
+   "endPos": {"line": 61, "column": 15},
+   "data": "unexpected token '<'; expected command"}],
+ "env": 0}
+

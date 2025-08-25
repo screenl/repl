@@ -1,0 +1,30 @@
+/scratch/yj2638/repl/.venv/lib/python3.8/site-packages/transformers/utils/hub.py:128: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+  0%|          | 0/378 [00:00<?, ?it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.39s/it][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.00s/it][ALoading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.06s/it]
+The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.70it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.59it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.42it/s]warning: mathlib: repository '././.lake/packages/mathlib' has local changes
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='yarn': {'mscale', 'original_max_position_embeddings'}
+`rope_scaling`'s factor field must be a float >= 1, got 16
+`rope_scaling`'s beta_fast field must be a float, got 32
+`rope_scaling`'s beta_slow field must be a float, got 1
+
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s][A
+Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  2.74it/s][A
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.56it/s][ALoading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  3.40it/s]slurmstepd: error: *** JOB 65368994 ON gv003 CANCELLED AT 2025-08-23T13:05:42 ***

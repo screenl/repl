@@ -1,0 +1,7 @@
+Not a conda environment: /scratch/yj2638/repl/.venv/bin/activate
+Traceback (most recent call last):
+  File "main_minif2f_prove.py", line 6, in <module>
+    import prover
+  File "/scratch/yj2638/repl/prover.py", line 1, in <module>
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+ModuleNotFoundError: No module named 'transformers'
