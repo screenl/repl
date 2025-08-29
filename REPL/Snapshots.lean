@@ -83,7 +83,7 @@ def unpickle (path : FilePath) : IO (CommandSnapshot × CompactedRegion) := unsa
   let ((imports, map₂, cmdState, cmdContext), region) ←
     _root_.unpickle (Array Import × PHashMap Name ConstantInfo × CompactableCommandSnapshot ×
       Command.Context) path
-  let env ← (← importModules imports {} 0).replay (Std.HashMap.ofList map₂.toList)
+  let env ← (← importModules imports {} 0).replay (HashMap.ofList map₂.toList)
   let p' : CommandSnapshot :=
   { cmdState := { cmdState with env }
     cmdContext }
@@ -116,8 +116,8 @@ open Lean Elab Tactic
 /-- New messages in a `ProofSnapshot`, relative to an optional previous `ProofSnapshot`. -/
 def newMessages (new : ProofSnapshot) (old? : Option ProofSnapshot := none) : List Lean.Message :=
   match old? with
-  | none => new.coreState.messages.toList
-  | some old => new.coreState.messages.toList.drop (old.coreState.messages.toList.length)
+  | none => new.coreState.messages.msgs.toList
+  | some old => new.coreState.messages.msgs.toList.drop (old.coreState.messages.msgs.size)
 
 /-- New info trees in a `ProofSnapshot`, relative to an optional previous `ProofSnapshot`. -/
 def newInfoTrees (new : ProofSnapshot) (old? : Option ProofSnapshot := none) : List InfoTree :=
@@ -194,6 +194,7 @@ def create (ctx : ContextInfo) (lctx? : Option LocalContext) (env? : Option Envi
     (goals : List MVarId) (types : List Expr := []) : IO ProofSnapshot := do
   ctx.runMetaM (lctx?.getD {}) do
     let goals := goals ++ (← types.mapM fun t => Expr.mvarId! <$> Meta.mkFreshExprMVar (some t))
+    goals.head!.withContext do
     let s ← getThe Core.State
     let s := match env? with
     | none => s
@@ -259,14 +260,13 @@ When pickling the `Environment`, we do so relative to its imports.
 def pickle (p : ProofSnapshot) (path : FilePath) : IO Unit := do
   let env := p.coreState.env
   let p' := { p with coreState := { p.coreState with env := ← mkEmptyEnvironment }}
-  let (cfg, _) ← Lean.Meta.getConfig.toIO p'.coreContext p'.coreState p'.metaContext p'.metaState
   _root_.pickle path
     (env.header.imports,
      env.constants.map₂,
      ({ p'.coreState with } : CompactableCoreState),
      p'.coreContext,
      p'.metaState,
-     ({ p'.metaContext with config := cfg } : CompactableMetaContext),
+     ({ p'.metaContext with } : CompactableMetaContext),
      p'.termState,
      ({ p'.termContext with } : CompactableTermContext),
      p'.tacticState,
@@ -285,9 +285,9 @@ def unpickle (path : FilePath) (cmd? : Option CommandSnapshot) :
   let env ← match cmd? with
   | none =>
     enableInitializersExecution
-    (← importModules imports {} 0).replay (Std.HashMap.ofList map₂.toList)
+    (← importModules imports {} 0).replay (HashMap.ofList map₂.toList)
   | some cmd =>
-    cmd.cmdState.env.replay (Std.HashMap.ofList map₂.toList)
+    cmd.cmdState.env.replay (HashMap.ofList map₂.toList)
   let p' : ProofSnapshot :=
   { coreState := { coreState with env }
     coreContext

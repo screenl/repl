@@ -6,9 +6,6 @@ EXPECTED_DIR="test"
 
 lake build
 
-# ignore locale to ensure test `bla` runs before `bla2`
-export LC_COLLATE=C
-
 # Iterate over each .in file in the test directory
 for infile in $IN_DIR/*.in; do
     # Extract the base filename without the extension
@@ -34,8 +31,8 @@ for infile in $IN_DIR/*.in; do
         rm "$tmpfile"
     else
         echo "$base: FAILED"
-        # Rename the temporary file instead of removing it
-        mv "$tmpfile" "${expectedfile/.expected.out/.produced.out}"
+        # Remove the temporary file
+        rm "$tmpfile"
         exit 1
     fi
 

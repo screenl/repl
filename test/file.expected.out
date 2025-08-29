@@ -1,7 +1,5 @@
 {"tactics":
- [{"usedConstants":
-   ["f", "g", "instHAdd", "HAdd.hAdd", "Nat", "instAddNat", "rfl"],
-   "tactic": "exact rfl",
+ [{"tactic": "exact rfl",
    "proofState": 0,
    "pos": {"line": 5, "column": 29},
    "goals": "⊢ f + g = 39",

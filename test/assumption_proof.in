@@ -1,3 +1,0 @@
-{"cmd": "theorem aa (x : Nat) (h1 : x  = 2) : x = 2 := by sorry"}
-
-{"tactic": "assumption", "proofState": 0}

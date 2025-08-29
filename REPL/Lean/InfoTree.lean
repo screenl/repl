@@ -53,7 +53,6 @@ namespace Lean.Elab.Info
 def kind : Info → String
   | .ofTacticInfo         _ => "TacticInfo"
   | .ofTermInfo           _ => "TermInfo"
-  | ofPartialTermInfo     _ => "PartialTermInfo"
   | .ofCommandInfo        _ => "CommmandInfo"
   | .ofMacroExpansionInfo _ => "MacroExpansionInfo"
   | .ofOptionInfo         _ => "OptionInfo"
@@ -63,14 +62,12 @@ def kind : Info → String
   | .ofCustomInfo         _ => "CustomInfo"
   | .ofFVarAliasInfo      _ => "FVarAliasInfo"
   | .ofFieldRedeclInfo    _ => "FieldRedeclInfo"
-  | .ofChoiceInfo         _ => "ChoiceInfo"
-  | .ofDelabTermInfo      _ => "DelabTermInfo"
+  | .ofOmissionInfo       _ => "OmissionInfo"
 
 /-- The `Syntax` for a `Lean.Elab.Info`, if there is one. -/
 def stx? : Info → Option Syntax
   | .ofTacticInfo         info => info.stx
   | .ofTermInfo           info => info.stx
-  | ofPartialTermInfo     info => info.stx
   | .ofCommandInfo        info => info.stx
   | .ofMacroExpansionInfo info => info.stx
   | .ofOptionInfo         info => info.stx
@@ -80,8 +77,7 @@ def stx? : Info → Option Syntax
   | .ofCustomInfo         info => info.stx
   | .ofFVarAliasInfo      _    => none
   | .ofFieldRedeclInfo    info => info.stx
-  | .ofChoiceInfo         info => info.stx
-  | .ofDelabTermInfo      info => info.stx
+  | .ofOmissionInfo       info => info.stx
 
 /-- Is the `Syntax` for this `Lean.Elab.Info` original, or synthetic? -/
 def isOriginal (i : Info) : Bool :=
@@ -115,12 +111,6 @@ def isSubstantive (t : TacticInfo) : Bool :=
   | some ``Lean.Parser.Tactic.paren => false
   | _ => true
 
-def getUsedConstantsAsSet (t : TacticInfo) : NameSet :=
-  t.goalsBefore
-    |>.filterMap t.mctxAfter.getExprAssignmentCore?
-    |>.map Expr.getUsedConstantsAsSet
-    |>.foldl .union .empty
-
 end Lean.Elab.TacticInfo
 
 namespace Lean.Elab.InfoTree
@@ -135,9 +125,9 @@ partial def filter (p : Info → Bool) (m : MVarId → Bool := fun _ => false) :
   | .context ctx tree => tree.filter p m |>.map (.context ctx)
   | .node info children =>
     if p info then
-      [.node info (children.toList.map (filter p m)).flatten.toPArray']
+      [.node info (children.toList.map (filter p m)).join.toPArray']
     else
-      (children.toList.map (filter p m)).flatten
+      (children.toList.map (filter p m)).join
   | .hole mvar => if m mvar then [.hole mvar] else []
 
 /-- Discard all nodes besides `.context` nodes and `TacticInfo` nodes. -/
@@ -154,14 +144,13 @@ partial def retainSubstantive (tree : InfoTree) : List InfoTree :=
   tree.filter fun | .ofTacticInfo i => i.isSubstantive | _ => true
 
 /-- Analogue of `Lean.Elab.InfoTree.findInfo?`, but that returns all results. -/
-partial def findAllInfo (t : InfoTree) (ctx? : Option ContextInfo) (p : Info → Bool)
-    (stop : Info → Bool := fun _ => false) :
+partial def findAllInfo (t : InfoTree) (ctx? : Option ContextInfo) (p : Info → Bool) :
     List (Info × Option ContextInfo) :=
   match t with
-  | context ctx t => t.findAllInfo (ctx.mergeIntoOuter? ctx?) p stop
+  | context ctx t => t.findAllInfo (ctx.mergeIntoOuter? ctx?) p
   | node i ts  =>
     let info := if p i then [(i, ctx?)] else []
-    let rest := if stop i then [] else ts.toList.flatMap (fun t => t.findAllInfo ctx? p stop)
+    let rest := ts.toList.bind (fun t => t.findAllInfo ctx? p)
     info ++ rest
   | _ => []
 
@@ -190,9 +179,9 @@ def findSorryTacticNodes (t : InfoTree) : List (TacticInfo × ContextInfo) :=
 corresponding to explicit `sorry` terms,
 each equipped with its relevant `ContextInfo`. -/
 def findSorryTermNodes (t : InfoTree) : List (TermInfo × ContextInfo) :=
-  let infos := t.findAllInfo none
-    (fun i => match i with | .ofTermInfo i => i.stx.isSorryTerm | _ => false)
-    (fun i => match i with | .ofTacticInfo i => i.stx.isSorryTactic | _ => false)
+  let infos := t.findAllInfo none fun i => match i with
+  | .ofTermInfo i => i.stx.isSorryTerm
+  | _ => false
   infos.filterMap fun p => match p with
   | (.ofTermInfo i, some ctx) => (i, ctx)
   | _ => none
@@ -217,16 +206,11 @@ def sorries (t : InfoTree) : List (ContextInfo × SorryType × Position × Posit
   (t.findSorryTermNodes.map fun ⟨i, ctx⟩ =>
     (ctx, .term i.lctx i.expectedType?, stxRange ctx.fileMap i.stx))
 
-def tactics (t : InfoTree) : List (ContextInfo × Syntax × List MVarId × Position × Position × Array Name) :=
+def tactics (t : InfoTree) : List (ContextInfo × Syntax × List MVarId × Position × Position) :=
+  (t.findTacticNodes.map fun ⟨i, ctx⟩ =>
     -- HACK: creating a child ngen
-  t.findTacticNodes.map fun ⟨i, ctx⟩ =>
-    let range := stxRange ctx.fileMap i.stx
-    ( { ctx with mctx := i.mctxBefore, ngen := ctx.ngen.mkChild.1 },
-      i.stx,
-      i.goalsBefore,
-      range.fst,
-      range.snd,
-      i.getUsedConstantsAsSet.toArray )
+     ({ ctx with mctx := i.mctxBefore, ngen := ctx.ngen.mkChild.1 }, i.stx, i.goalsBefore,
+       stxRange ctx.fileMap i.stx))
 
 
 end Lean.Elab.InfoTree

@@ -12,101 +12,6 @@ import REPL.Lean.InfoTree
 import REPL.Lean.InfoTree.ToJson
 import REPL.Snapshots
 
-import Mathlib.Algebra.Algebra.Basic
-import Mathlib.Algebra.Order.Floor
-import Mathlib.Algebra.BigOperators.Associated
-import Mathlib.Algebra.BigOperators.Fin
-
-import Mathlib.Algebra.BigOperators.Pi
-import Mathlib.Algebra.GeomSum
-import Mathlib.Algebra.Group.Pi.Basic
-import Mathlib.Algebra.Group.Pi.Lemmas
-import Mathlib.Algebra.Group.Commute.Basic
-import Mathlib.Algebra.Group.Commute.Defs
-import Mathlib.Algebra.Group.Commute.Hom
-import Mathlib.Algebra.Group.Commute.Units
-import Mathlib.Algebra.Group.Submonoid.Membership
-import Mathlib.Algebra.Order.Floor
-import Mathlib.Algebra.QuadraticDiscriminant
-import Mathlib.Algebra.Ring.Basic
-import Mathlib.Analysis.MeanInequalitiesPow
-import Mathlib.Analysis.Asymptotics.AsymptoticEquivalent
-import Mathlib.Analysis.Normed.Module.Basic
-import Mathlib.Analysis.SpecialFunctions.Log.Basic
-import Mathlib.Analysis.SpecialFunctions.Log.Base
-import Mathlib.Combinatorics.SimpleGraph.Basic
-import Mathlib.Data.Complex.Basic
-import Mathlib.Data.Complex.Exponential
-import Mathlib.Data.Finset.Basic
-import Mathlib.Data.Fintype.Card
-
-import Mathlib.Data.Int.GCD
-import Mathlib.Data.Int.ModEq
-import Mathlib.Algebra.Group.Int.Even
-import Mathlib.Data.List.Intervals
-import Mathlib.Data.List.Palindrome
-import Mathlib.Data.Multiset.Basic
-
-import Mathlib.Data.Nat.Choose.Basic
-import Mathlib.Data.Nat.Factorial.Basic
-import Mathlib.Data.Nat.Fib.Basic
-import Mathlib.Data.Nat.Fib.Zeckendorf
-import Mathlib.Data.Nat.ModEq
-import Mathlib.Data.Nat.Multiplicity
-import Mathlib.Algebra.Group.Nat.Even
-import Mathlib.Data.Nat.Prime.Basic
-import Mathlib.Data.PNat.Basic
-import Mathlib.Data.PNat.Prime
-
-import Mathlib.Data.Rat.BigOperators
-import Mathlib.Data.Rat.Cast.CharZero
-import Mathlib.Data.Rat.Cast.Defs
-import Mathlib.Data.Rat.Cast.Lemmas
-import Mathlib.Data.Rat.Cast.Order
-import Mathlib.Data.Rat.Defs
-import Mathlib.Data.Rat.Denumerable
-import Mathlib.Data.Rat.Encodable
-import Mathlib.Algebra.Field.Rat
-import Mathlib.Data.Rat.Floor
-import Mathlib.Data.Rat.Init
-import Mathlib.Data.Rat.Lemmas
-import Mathlib.Algebra.Order.Ring.Rat
-import Mathlib.Data.Rat.Sqrt
-
-import Mathlib.Data.Rat.Star
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.ENNReal.Basic
-import Mathlib.Data.ENNReal.Inv
-import Mathlib.Data.ENNReal.Operations
-import Mathlib.Data.ENNReal.Real
-import Mathlib.Data.Real.ENatENNReal
-import Mathlib.Data.Real.Irrational
-import Mathlib.Data.NNReal.Defs
-import Mathlib.Data.Real.Sqrt
-
-import Mathlib.Data.Finite.Defs
-import Mathlib.Data.Sym.Sym2
-import Mathlib.Data.ZMod.Basic
-import Mathlib.Dynamics.FixedPoints.Basic
-
-import Mathlib.LinearAlgebra.AffineSpace.AffineMap
-import Mathlib.LinearAlgebra.AffineSpace.Independent
-import Mathlib.LinearAlgebra.AffineSpace.Ordered
-import Mathlib.Logic.Equiv.Basic
-
-import Mathlib.Order.Filter.Basic
-
-import Mathlib.Order.WellFounded
-import Mathlib.Topology.Basic
-import Mathlib.Topology.Instances.NNReal.Lemmas
-
-import Mathlib.Data.ZMod.Basic
-import Mathlib.RingTheory.Int.Basic
-
-
-import Aesop
-
-
 /-!
 # A REPL for Lean.
 
@@ -190,20 +95,18 @@ def recordProofSnapshot (proofState : ProofSnapshot) : M m Nat := do
   return id
 
 def sorries (trees : List InfoTree) (env? : Option Environment) : M m (List Sorry) :=
-  trees.flatMap InfoTree.sorries |>.filter (fun t => match t.2.1 with
-    | .term _ none => false
-    | _ => true ) |>.mapM
-      fun ⟨ctx, g, pos, endPos⟩ => do
-        let (goal, proofState) ← match g with
-        | .tactic g => do
-           let s ← ProofSnapshot.create ctx none env? [g]
-           pure ("\n".intercalate <| (← s.ppGoals).map fun s => s!"{s}", some s)
-        | .term lctx (some t) => do
-           let s ← ProofSnapshot.create ctx lctx env? [] [t]
-           pure ("\n".intercalate <| (← s.ppGoals).map fun s => s!"{s}", some s)
-        | .term _ none => unreachable!
-        let proofStateId ← proofState.mapM recordProofSnapshot
-        return Sorry.of goal pos endPos proofStateId
+  trees.bind InfoTree.sorries |>.mapM
+    fun ⟨ctx, g, pos, endPos⟩ => do
+      let (goal, proofState) ← match g with
+      | .tactic g => do
+         let s ← ProofSnapshot.create ctx none env? [g]
+         pure ("\n".intercalate <| (← s.ppGoals).map fun s => s!"{s}", some s)
+      | .term lctx (some t) => do
+         let s ← ProofSnapshot.create ctx lctx env? [] [t]
+         pure ("\n".intercalate <| (← s.ppGoals).map fun s => s!"{s}", some s)
+      | .term _ none => unreachable!
+      let proofStateId ← proofState.mapM recordProofSnapshot
+      return Sorry.of goal pos endPos proofStateId
 
 def ppTactic (ctx : ContextInfo) (stx : Syntax) : IO Format :=
   ctx.runMetaM {} try
@@ -212,13 +115,13 @@ def ppTactic (ctx : ContextInfo) (stx : Syntax) : IO Format :=
     pure "<failed to pretty print>"
 
 def tactics (trees : List InfoTree) : M m (List Tactic) :=
-  trees.flatMap InfoTree.tactics |>.mapM
-    fun ⟨ctx, stx, goals, pos, endPos, ns⟩ => do
+  trees.bind InfoTree.tactics |>.mapM
+    fun ⟨ctx, stx, goals, pos, endPos⟩ => do
       let proofState := some (← ProofSnapshot.create ctx none none goals)
       let goals := s!"{(← ctx.ppGoals goals)}".trim
       let tactic := Format.pretty (← ppTactic ctx stx)
       let proofStateId ← proofState.mapM recordProofSnapshot
-      return Tactic.of goals tactic pos endPos proofStateId ns
+      return Tactic.of goals tactic pos endPos proofStateId
 
 /-- Record a `ProofSnapshot` and generate a JSON response for it. -/
 def createProofStepReponse (proofState : ProofSnapshot) (old? : Option ProofSnapshot := none) :
@@ -305,21 +208,18 @@ def runCommand (s : Command) : M IO (CommandResponse ⊕ Error) := do
   let cmdSnapshot :=
   { cmdState
     cmdContext := (cmdSnapshot?.map fun c => c.cmdContext).getD
-      { fileName := "",
-        fileMap := default,
-        snap? := none,
-        cancelTk? := none } }
+      { fileName := "", fileMap := default, tacticCache? := none } }
   let env ← recordCommandSnapshot cmdSnapshot
   let jsonTrees := match s.infotree with
   | some "full" => trees
-  | some "tactics" => trees.flatMap InfoTree.retainTacticInfo
-  | some "original" => trees.flatMap InfoTree.retainTacticInfo |>.flatMap InfoTree.retainOriginal
-  | some "substantive" => trees.flatMap InfoTree.retainTacticInfo |>.flatMap InfoTree.retainSubstantive
+  | some "tactics" => trees.bind InfoTree.retainTacticInfo
+  | some "original" => trees.bind InfoTree.retainTacticInfo |>.bind InfoTree.retainOriginal
+  | some "substantive" => trees.bind InfoTree.retainTacticInfo |>.bind InfoTree.retainSubstantive
   | _ => []
-  let infotree ← if jsonTrees.isEmpty then
-    pure none
+  let infotree := if jsonTrees.isEmpty then
+    none
   else
-    pure <| some <| Json.arr (← jsonTrees.toArray.mapM fun t => t.toJson none)
+    some <| Json.arr (← jsonTrees.toArray.mapM fun t => t.toJson none)
   return .inl
     { env,
       messages,
@@ -398,12 +298,6 @@ def parse (query : String) : IO Input := do
     | .error e => throw <| IO.userError <| toString <| toJson <|
         (⟨"Could not parse as a valid JSON command:\n" ++ e⟩ : Error)
 
-/-- Avoid buffering the output. -/
-def printFlush [ToString α] (s : α) : IO Unit := do
-  let out ← IO.getStdout
-  out.putStr (toString s)
-  out.flush -- Flush the output
-
 /-- Read-eval-print loop for Lean. -/
 unsafe def repl : IO Unit :=
   StateT.run' loop {}
@@ -420,7 +314,7 @@ where loop : M IO Unit := do
   | .unpickleEnvironment r => return toJson (← unpickleCommandSnapshot r)
   | .pickleProofSnapshot r => return toJson (← pickleProofSnapshot r)
   | .unpickleProofSnapshot r => return toJson (← unpickleProofSnapshot r)
-  printFlush "\n" -- easier to parse the output if there are blank lines
+  IO.println "" -- easier to parse the output if there are blank lines
   loop
 
 /-- Main executable function, run as `lake exe repl`. -/
