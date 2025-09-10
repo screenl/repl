@@ -165,8 +165,8 @@ if __name__ == "__main__":
                 ## in this logic, then @k, k = MAX_ROUNDS * MAX_RETRY_COUNT
                 inter.comm()
             
-                with open(log_file, "a", encoding='utf-8') as f:
-                    f.write(str({"problem_index": i,"code": inter.code, "result": "no bug, can double check"}) + "\n")
+            with open(log_file, "a", encoding='utf-8') as f:
+                f.write(str({"problem_index": i,"code": inter.code, "result": "no bug, can double check"}) + "\n")
 
         except Exception as e:
             print(f"Error initializing interaction: {e}")
